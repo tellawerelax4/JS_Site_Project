@@ -65,5 +65,13 @@ function obnovitOtobrazhenie() {
   });
 
   const vipolneno = spisokMissiy.filter(m => m.vipolneno).length;
-  progress.textContent = `Прогресс: ${vipolneno}/${spisokMissiy.length} — ${vipolneno === spisokMissiy.length && spisokMissiy.length > 0 ? 'шаражное чудо!' : 'ты на грани отчисления'}`;
+  progress.textContent = `Прогресс: ${vipolneno}/${spisokMissiy.length} — ${
+    vipolneno === 0
+        ? 'тебя точно отчислят'
+        : vipolneno === spisokMissiy.length && spisokMissiy.length > 0
+        ? 'Пока ещё учишься'
+        : vipolneno > spisokMissiy.length / 2
+        ? 'тебя возможно отчислят'
+        : 'ты на грани отчисления'
+}`;
 }
