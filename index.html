@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Sharaga Planner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="obertka">
+    <h1>📚 Sharaga Planner</h1>
+
+    <div class="forma-dobavleniya">
+      <input type="text" id="vvodZadachi" placeholder="Новая миссия">
+      <button id="knopkaDobavit">Добавить'</button>
+    </div>
+
+    <div class="filtry">
+      <button data-filtr="vse">Все</button>
+      <button data-filtr="aktivnye">Активные</button>
+      <button data-filtr="vypolnennye">Выполненные</button>
+    </div>
+
+    <ul id="spisokZadach"></ul>
+
+    <div id="progress">Progress: 0/0 — Ты на грани отчисления</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
